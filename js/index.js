@@ -1,12 +1,14 @@
 function addTask() {
-    let task = document.getElementById('task').value;
+    let task = document.getElementById('task');
     let taskList = document.getElementById('taskList');
     let taskItem = document.createElement('div');
 
     if (task === '') {
         alert('You have to enter a task');
     } else {
-        taskItem.innerHTML = task;
+        taskItem.innerHTML = task.value;
+        task.value = '';
+        taskItem.classList.add('taskItem');
         taskItem.addEventListener('click', function() {
             if (taskItem.classList.contains('completed')) {
                 taskItem.remove();
