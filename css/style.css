@@ -4,8 +4,9 @@
 }
 
 :root {
-    --containerbackround: #bce6d1;
-    --background: #e7e7e7;
+    --containerbackround: #e7e7e7;
+    --background: #ffffff;
+    --hover: #b7b7b7;
 }
 
 * {
@@ -30,19 +31,32 @@ body {
     border-color: black;
 }
 
-h1, .menu {
+.taskItem {
+    background-color: white;
+    margin-top: 5px;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+h1,
+.menu {
     margin-top: 10px;
 }
 
-.menu, input {
+.menu,
+input {
     font-size: 16px;
     border-radius: 5px;
     padding: 3px;
+    border-color: black;
+    border-style: solid;
 }
 
 button {
     cursor: pointer;
-    margin: 0 10px;
+    height: 30px;
+    padding: 0 14px !important;
+    border-style: solid;
     background-color: white;
 }
 
@@ -56,6 +70,50 @@ hr {
     background-color: black;
 }
 
+.taskItem {
+    border-color: black;
+    border-style: solid;
+    cursor: pointer;
+}
+
+.taskItem:hover {
+    background-color: var(--hover);
+}
+
 .completed {
     text-decoration: line-through;
+}
+
+@media (max-width: 675px) {
+    #container {
+        max-width: 100%;
+    }
+
+    input {
+        width: 98%;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        margin: 5px;
+    }
+
+    #container {
+        padding: 10px;
+    }
+
+    .menu,
+    input {
+        font-size: 14px;
+    }
+
+    button {
+        height: 25px;
+        padding: 0 10px !important;
+    }
+
+    input {
+        height: 15px;
+    }
 }
