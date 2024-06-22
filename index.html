@@ -9,10 +9,10 @@
     <title>To Do List</title>
 </head>
 
-<body>
+<body onload="load()">
     <div id="container">
         <h1>Simple To Do List</h1>
-        <input type="text" id="task" class="menu" placeholder="Type here your task...">
+        <input type="text" id="task" class="menu" placeholder="Type here your task..." autocomplete="off">
         <button onClick="addTask()" id="addTask" class="menu">Add task</button>
         <button onClick="clearTasks()" class="menu">Clear tasks</button>
         <hr id="hr">
